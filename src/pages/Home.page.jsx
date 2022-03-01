@@ -37,7 +37,7 @@ function Home() {
       <h1 className="text-center">Welcome to my todo list</h1>
       {todos.map((todo, index) => (
         <TodoCard
-          // onDelete={deleteTodo}
+          onDelete={deleteTodo}
           onDelete={(id) => deleteTodo(id)}
           key={index}
           title={todo.title}

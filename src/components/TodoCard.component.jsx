@@ -1,6 +1,6 @@
 import React from "react";
 
-function TodoCard({ id, title, completed, onDelete }) {
+function TodoCard({ id, title,description,time, completed, onDelete }) {
   let badgeClass = "";
   let badgeBg = "";
   if (completed) {
@@ -15,7 +15,9 @@ function TodoCard({ id, title, completed, onDelete }) {
     <div className={"border rounded p-3 mb-3 " + badgeBg}>
       <h3>TD#{id}: {title}</h3>
       <p className={badgeClass}>{completed ? "Is completed" : "Is pending"}</p>
+      <p>{description} </p>
       <p><button onClick={() => onDelete(id)} className="btn btn-danger btn-sm">Delete</button></p>
+      <p className="d-flex flex-end"> {time} </p>
     </div>
   );
 }
