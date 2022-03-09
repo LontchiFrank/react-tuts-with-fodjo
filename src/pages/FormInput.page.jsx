@@ -30,6 +30,12 @@ function FormInput() {
         };
      const id = uuidv4();
 
+const editTodo = (id)=>{
+  console.log("knock me");
+  setFormData(formData)
+}
+
+
         const handleSubmit=(e)=>{
           const newTodo={
             id: uuidv4(),
@@ -47,7 +53,7 @@ setFormData({
           }
 
 
-   const list = hold.map((el,key)=> <TodoCard  el={el} key={key}  id={el.id} title={el.title} time={el.time} description={el.description}  onDelete={deleteTodo}  /> )   
+   const list = hold.map((el,key)=> <TodoCard  el={el} key={key}  id={el.id} title={el.title} time={el.time} description={el.description}  onDelete={deleteTodo}  onUpdate={editTodo} /> )   
   return (
     <div>
     <div class="container register">
