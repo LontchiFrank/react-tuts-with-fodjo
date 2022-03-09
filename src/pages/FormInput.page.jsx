@@ -37,10 +37,16 @@ function FormInput() {
           }
             e.preventDefault();
             setHold([...hold,newTodo])
-
-        console.log(hold)
+setFormData({
+  title:"",
+  description:"",
+  time:""
+})
+      
 
           }
+
+
    const list = hold.map((el,key)=> <TodoCard  el={el} key={key}  id={el.id} title={el.title} time={el.time} description={el.description}  onDelete={deleteTodo}  /> )   
   return (
     <div>
