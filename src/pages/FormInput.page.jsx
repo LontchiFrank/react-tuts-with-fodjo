@@ -30,9 +30,14 @@ function FormInput() {
         };
      const id = uuidv4();
 
-const editTodo = (id)=>{
-  console.log("knock me");
-  setFormData(formData)
+const editTodo = (el)=>{
+
+  setFormData({
+    title:el.title,
+    description:el.description,
+    time:el.time
+  })
+  console.log(el);
 }
 
 
